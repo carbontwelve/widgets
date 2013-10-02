@@ -1,0 +1,20 @@
+{
+    "name": "carbontwelve/widgets",
+    "description": "",
+    "authors": [
+        {
+            "name": "Simon Dann",
+            "email": "simon.dann@halesway.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Carbontwelve\\Widgets": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
