@@ -63,6 +63,14 @@ class Widget
 
 	public function doCall()
 	{
-		return call_user_func_array(array($this->service, $this->method), func_get_args());
+        $handler = array($this->service, $this->method);
+
+        if ( is_callable( $handler ) ){
+		    return call_user_func_array( $handler, func_get_args() );
+        }else{
+            throw new ServiceNotCallableException( 'Class ('. $this->service .') is not callable.' );
+        }
 	}
 }
+
+class ServiceNotCallableException extends \Exception {}

@@ -74,7 +74,15 @@ class Widgets
 
     	foreach ( $this->widgetRepository->all() as $tag )
     	{
-			$result[] = $this->display( $tag );
+            if ( is_array($tag) )
+            {
+                foreach ($tag as $item)
+                {
+                    $result[$item->getTag()] = $this->display( $item->getTag() );
+                }
+            }else{
+                $result[] = $this->display( $tag );
+            }
     	}
 
     	return $result;
