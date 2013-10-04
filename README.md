@@ -8,3 +8,16 @@ Carbontwelve\Widgets
 View widgets provider for laravel.
 
 This is a work in progress...
+
+If you would like to use this in your projects you can merge the following into your `composer.json` file:
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/carbontwelve/widgets.git"
+        }
+    ],
+    "require": {
+        "carbontwelve/widgets": "dev-master"
+    }
+    
