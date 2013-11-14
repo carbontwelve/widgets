@@ -18,7 +18,10 @@ class WidgetsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app['carbontwelve.widgets'] = $this->app->share(function($app)
+        {
+            return new WidgetManager($app);
+        });
 	}
 
 	/**
